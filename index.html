@@ -1,15 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/mix-master/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MixMaster Starter</title>
-    <script type="module" crossorigin src="/mix-master/assets/index-9bd7671a.js"></script>
-    <link rel="stylesheet" href="/mix-master/assets/index-5d5b66eb.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/mix-master/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MixMaster Starter</title>
+		<script>
+			(function (l) {
+				if (l.search[1] === "/") {
+					var decoded = l.search
+						.slice(1)
+						.split("&")
+						.map(function (s) {
+							return s.replace(/~and~/g, "&");
+						})
+						.join("?");
+					window.history.replaceState(
+						null,
+						null,
+						l.pathname.slice(0, -1) + decoded + l.hash
+					);
+				}
+			})(window.location);
+		</script>
+		<script type="module" crossorigin src="/mix-master/assets/index-ba6b1827.js"></script>
+		<link rel="stylesheet" href="/mix-master/assets/index-5d5b66eb.css">
+	</head>
+	<body>
+		<div id="root"></div>
+		
+	</body>
 </html>
